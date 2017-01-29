@@ -9,7 +9,20 @@
 # constructor accordingly.
 
 class Yodel
-
+  attr_reader :segment, :count, :articulate
+ def initialize (snippet)
+   @segment = snippet[:segment]
+   @count = snippet[:count]
+  end 
+  def segment
+   return @segment
+  end 
+ def count 
+  return @count 
+ end 
+ def articulate
+  return @segment * @count
+ end
 end
 
 
@@ -55,4 +68,27 @@ if result == 'Oh-di-lay-ee-ayOh-di-lay-ee-ayOh-di-lay-ee-ayOh-di-lay-ee-ay'
   puts "PASS!"
 else
   puts "F"
+end
+
+
+class Yodel
+ attr_reader :segment, :count, :attributes
+
+ def initialize(multiply)
+   @segment = multiply[:segment]
+   @count = multiply[:count]
+
+ end
+
+ def segment
+   return @segment
+ end
+
+ def count
+   return @count
+ end
+
+ def articulate
+   return @segment * @count
+ end  
 end

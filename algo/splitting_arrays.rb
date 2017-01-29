@@ -2,6 +2,8 @@
 
 def split_array(array, array_size)
 
+return array.each_slice(array_size).to_a
+
 end
 
 # Driver code - don't touch anything below this line.
